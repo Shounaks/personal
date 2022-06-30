@@ -11,37 +11,37 @@ export class ProjectComponent implements OnInit {
     // ProjectContributor Section
     let aakash: ProjectContributor = {
       name: "Aakash Pawar", 
-      imageUrl: "../../assets/akash.jpg",
+      imageUrl: "assets/akash.jpg",
       linkedinUrl: "https://www.linkedin.com/in/akashpawar/"
     }
     let ratnesh: ProjectContributor = {
       name: "Ratnesh Kumar", 
-      imageUrl: "../../assets/ratnesh.jpg",
+      imageUrl: "assets/ratnesh.jpg",
       linkedinUrl: "https://www.linkedin.com/in/ratnesh-kumar-1nine9six/"
     }
     let sachin: ProjectContributor = {
       name: "Sachin Kapate", 
-      imageUrl: "../../assets/sachin.jpg",
+      imageUrl: "assets/sachin.jpg",
       linkedinUrl: "https://www.linkedin.com/in/sachinkapate/"
     }
     let tejal: ProjectContributor = {
       name: "Tejal Bhoge", 
-      imageUrl: "../../assets/tejal.jpg",
+      imageUrl: "assets/tejal.jpg",
       linkedinUrl: "https://www.linkedin.com/in/tejal-bhoge-9729081b7/"
     }
     let akshay: ProjectContributor = {
       name: "Akshay Bhaskare", 
-      imageUrl: "../../assets/akshay.jpg",
+      imageUrl: "assets/akshay.jpg",
       linkedinUrl: "https://www.linkedin.com/in/akshay-bhaskare-888519186/"
     }
     let pratik: ProjectContributor = {
       name: "Pratik Kurvalkar", 
-      imageUrl: "../../assets/pratik.jpg",
+      imageUrl: "assets/pratik.jpg",
       linkedinUrl: "https://www.linkedin.com/in/pratik-kurwalkar-91646713a/"
     }
     let shlok: ProjectContributor = {
       name: "Shlok Kambhale", 
-      imageUrl: "../../assets/shlok.jpg",
+      imageUrl: "assets/shlok.jpg",
       linkedinUrl: "https://www.linkedin.com/in/shlok-k-442a96126/"
     }
     // ProjectData
