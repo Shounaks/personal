@@ -1,0 +1,30 @@
+<div class="min-h-screen m-0 h-screen bg-base-200">
+    <div class="p-10 text-center bg-base-200">
+        <div class="bg-base-300 h-fit rounded-xl p-5">
+            <div class="text-7xl font-bold">Social Tavern</div>
+            <div class="divider">Download My Resume</div>
+            <div>
+                <button class="btn btn-warning" style="width: 100%">Resume</button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="rounded-3xl p-5">
+                    <!-- <h1 class="text-center text-5xl text-gray-600 font-extrabold p-5">Wanted</h1> -->
+                    <div class="divider text-gray-600">Social Media</div>
+                    <div class="inline-block px-4" *ngFor="let icon of iconList">
+                        <a href="{{icon.redirectTo}}" rel="{{icon.tooltip}}">
+                            <fa-icon class="hover:text-green-600" [icon]="icon.icon" size="5x"></fa-icon>
+                        </a>
+                    </div>
+                </div>
+                <div class="p-5">
+                    <div class="divider"></div>
+                    <p>Copyright © 2022 - All right reserved by Shounak Bhalerao</p>
+                    <p class="text-warning">I dont own any Art, If you think I forgot to give you credit for your art, contact me.</p>
+                    <br>
+                    This website uses <a class="link hover:text-green-600" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GPL 3.0.</a> So you are FREE to use it as per the T&C. <br>
+                    Art Credits Goes to <a class="link hover:text-green-600" href="https://kuvshinov_ilya.artstation.com/">Ilya Kuvshinov</a>.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@layer components{
+    .sidebar-icon {
+        @apply w-12 h-12 my-2 mx-auto bg-gray-800 text-green-500 relative flex items-center justify-center hover:bg-green-600 hover:text-white
+        rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer;
+    }
+
+    .highlight{
+        @apply bg-gradient-to-r from-pink-500 via-red-500 to-yellow-200 px-1 rounded text-gray-100;
+    }
+}
