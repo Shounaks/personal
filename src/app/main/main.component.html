@@ -17,7 +17,13 @@
           <div class="text-left">
             <div class="text-lg font-extrabold">Shounak Bhalerao</div>
             <div class="text-base-content/70 text-sm font-thin">Human - Developer - System Engineer@Infosys</div>
-            <div class="text-base-content/70 text-sm font-thin">Experience: </div>
+            <div class="text-base-content/70 text-sm font-thin">
+              Experience:
+              <span class="font-extrabold text-warning">
+                {{ calculateExperienceInYears() }} Year {{calculateExperience()%12}} Months
+              </span>
+              <div class="stat-desc">({{getStartDateInLocaleDateFormat()}} - {{getCurrentDateInLocaleDateFormat()}})</div>
+            </div>
           </div>
         </div>
         <div class="divider text-base-content/60 m-0">Attribute Sheet</div>

@@ -13,9 +13,9 @@ export class ContactComponent implements OnInit {
     {icon: faFacebookSquare, tooltip: "Facebook", redirectTo:"#DeletedAccount"},
     {icon: faTwitterSquare, tooltip: "Twitter", redirectTo:"#DeletedAccount"},
     {icon: faInstagramSquare, tooltip: "Instagram", redirectTo:"#DeletedAccount"},
-    {icon: faGithubSquare, tooltip: "Github", redirectTo:"#DeletedAccount"},
-    {icon: faLinkedin, tooltip: "LinkedIn", redirectTo:"#DeletedAccount"},
-    {icon: faEnvelopeSquare, tooltip: "E-Mail", redirectTo:"#DeletedAccount"},
+    {icon: faGithubSquare, tooltip: "Github", redirectTo:"https://github.com/Shounaks"},
+    {icon: faLinkedin, tooltip: "LinkedIn", redirectTo:"https://www.linkedin.com/in/shounak-bhalerao/"},
+    {icon: faEnvelopeSquare, tooltip: "E-Mail", redirectTo:"mailto:shounakbhalerao777@gmail.com"},
   ];
   constructor() { }
 

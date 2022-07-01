@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faUnity,faCss3Alt,faGithub,faHtml5,faJsSquare,IconDefinition,faJava,faAngular } from '@fortawesome/free-brands-svg-icons'
+import { faLaptopCode} from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-project',
@@ -6,6 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
+  unityIcon = faUnity;
+  css3Icon = faCss3Alt;
+  gitIcon = faGithub;
+  htmlIcon = faHtml5;
+  jsIcon = faJsSquare;
+  javaIcon = faJava;
+  programmingIcon = faLaptopCode;
+  angularIcon = faAngular;
+
+
   projects: Array<ProjectData> = [];
   constructor() { 
     // ProjectContributor Section
@@ -49,21 +61,21 @@ export class ProjectComponent implements OnInit {
       name: "Arcania - 2D DungeonCrawler",
       description: "Arcania is a video game which is scripted in C# and has elements of Role Playing Game and an Action Game created using Unity3D.",
       images: ["https://images7.alphacoders.com/493/493639.jpg"],
-      technologiesUsed: ["unity3d","C#","github","WebAssembly","heroku"],
+      technologiesUsed: ["unity3D","C#","Github","WebAssembly","Heroku"],
       members: [aakash,ratnesh,sachin]
     }
     let suvidha: ProjectData = {
       name: "Suvidha-Blood Bank Management System",
       description: "Suvidha is a basic ERM program written in C# using .NET framework and MS-SQL with Bootstrap, PopperJS and many other AWESOME libraries in frontend.",
       images: ["https://medicarepharmabusiness.com/wp-content/uploads/2017/11/blood-donationsjpg-07b8741b57623b28jpg-4fe7c56e6b01086a.jpg"],
-      technologiesUsed: ["ASP.NET","C#","HTML","CSS","Bootstrap"],
+      technologiesUsed: ["ASP.NET","C#","HTML","CSS","Bootstrap", "MS-SQL"],
       members: [tejal,akshay]
     }
     let presenT: ProjectData = {
       name: "PresenT-Attendance Management System",
       description: "Created a system which is able to take attendance of Students, process it, and store the report in XLS Format. Main Technology used was JavaEE and Apache POI.",
       images: ["https://cdn9.dissolve.com/p/D985_45_137/D985_45_137_1200.jpg"],
-      technologiesUsed: ["JavaEE","Microsoft Excel","HTML,CSS,JS"],
+      technologiesUsed: ["JavaEE","Microsoft Excel","HTML","CSS","JS"],
       members: [pratik,shlok]
     }
     let gladiator: ProjectData = {
@@ -76,16 +88,22 @@ export class ProjectComponent implements OnInit {
       name: "Khamang-Android Cookbook and Sharing app",
       description: "Khamang is a user application that is used to store and share the Recipes of the Food Dishes online built using Android studio and Firebase.",
       images: ["https://www.sbs.com.au/yourlanguage/sites/sbs.com.au.yourlanguage/files/pav_bhaji.jpg"],
-      technologiesUsed: ["Android Studio","Java","Gradle","Google FireBase"]
+      technologiesUsed: ["Android Studio","Java","Gradle","Google FireBase", "MySQL"]
     }
     let bfCompiler: ProjectData = {
       name: "BrainFuck Interpreter",
       description: "Esoteric Language Interpreter written using basic C",
       images: ["https://i.redd.it/ysomzew1lpwz.jpg"],
-      technologiesUsed: ["c"]
+      technologiesUsed: ["C"]
+    }
+    let personalWebsite: ProjectData = {
+      name: "Personal Website",
+      description: "This website was created and hosted with 💖 by Shounak",
+      images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Magnasco%2C_Alessandro_-_Hermit_in_the_Desert_-_Google_Art_Project.jpg/1024px-Magnasco%2C_Alessandro_-_Hermit_in_the_Desert_-_Google_Art_Project.jpg"],
+      technologiesUsed: ["Angular","HTML", "CSS", "JS", "TailwindCSS"]
     }
     //Add it here! until backend is created!
-    this.projects = [arcania,suvidha,presenT,khamang,gladiator,bfCompiler];
+    this.projects = [personalWebsite,arcania,suvidha,presenT,khamang,gladiator,bfCompiler];
   }
 
   ngOnInit(): void {
@@ -106,4 +124,11 @@ interface ProjectContributor{
   name:string,
   imageUrl:string,
   linkedinUrl:string
+}
+
+//TODO:  Use this interface
+interface iconDisplay{
+  name:string,
+  icon:IconDefinition,
+  classColour:string
 }

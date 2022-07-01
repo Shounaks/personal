@@ -3,7 +3,7 @@
         <div class="text-7xl font-bold">Projects Section </div>
         <div class="divider">College Projects</div>
         <div class="flex flex-row gap-10 flex-wrap">
-            <div class="card bg-base-100 w-96 shadow-xl" *ngFor="let projectData of projects">
+            <div class="card bg-base-100 w-96 shadow-xl transition-all ease-in hover:bg-white hover:scale-110 hover:shadow-2xl hover:text-black" *ngFor="let projectData of projects">
                 <figure>
                     <img src="{{projectData.images[0]}}" />
                 </figure>
@@ -22,7 +22,28 @@
 
                     <div class="divider">Created Using</div>
                     <div class="card-actions justify-center">
-                        <div class="badge badge-outline" *ngFor="let tech of projectData.technologiesUsed">{{tech}}</div>
+                        <div *ngFor="let tech of projectData.technologiesUsed">
+                            <!--TODO: // This can be refactored to get Enum Values which will be better in the future // -->
+                            <!-- Yeah no shit this needs an rework ASAP!!-->
+                            <span [ngClass]="{
+                                'badge badge-outline': true,
+                                'badge-success': tech === 'C' || tech.includes('Java')|| tech === 'C#',
+                                'badge-info': tech === 'HTML' || tech === 'CSS' || tech === 'JS' || tech === 'Bootstrap',
+                                'badge-warning': tech === 'Github' || tech === 'Heroku' || tech === 'WebAssembly',
+                                'badge-secondary': tech.includes('Angular'),
+                                'badge-error': tech === 'MS-SQL' || tech === 'Google FireBase' || tech === 'MySQL' || tech.includes('Oracle')
+                            }">
+                                <fa-icon *ngIf="tech === 'unity3D'" [icon]="unityIcon" class="mr-1 text-4xl"></fa-icon>
+                                <fa-icon *ngIf="tech === 'Github'" [icon]="gitIcon" class="mr-1"></fa-icon>
+                                <fa-icon *ngIf="tech === 'HTML'" [icon]="htmlIcon" class="mr-1"></fa-icon>
+                                <fa-icon *ngIf="tech === 'CSS'" [icon]="css3Icon" class="mr-1"></fa-icon>
+                                <fa-icon *ngIf="tech === 'JS'" [icon]="jsIcon" class="mr-1"></fa-icon>
+                                <fa-icon *ngIf="tech === 'Java'" [icon]="javaIcon" class="mr-1"></fa-icon>
+                                <fa-icon *ngIf="tech === 'Angular'" [icon]="angularIcon" class="mr-1"></fa-icon>
+                                <fa-icon *ngIf="tech === 'C' || tech === 'C#'" [icon]="programmingIcon" class="mr-1"></fa-icon>
+                                 {{tech}}
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
