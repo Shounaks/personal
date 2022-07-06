@@ -1,0 +1,12 @@
+.custom-mockup-code{
+    position: relative;
+    overflow: hidden;
+    overflow-x: auto;
+    min-width: 18rem/* 288px */;
+    --tw-bg-opacity: 1;
+    background-color: hsl(var(--n) / var(--tw-bg-opacity));
+    padding: 1.25rem/* 20px */;
+    --tw-text-opacity: 1;
+    color: hsl(var(--nc) / var(--tw-text-opacity));
+    border-radius: var(--rounded-box, 1rem);
+}
