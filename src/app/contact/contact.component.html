@@ -12,7 +12,7 @@
                     <div class="divider text-gray-600">Social Media</div>
                     <div class="inline-block px-4" *ngFor="let icon of iconList">
                         <a href="{{icon.redirectTo}}" rel="{{icon.tooltip}}">
-                            <fa-icon class="hover:text-green-600" [icon]="icon.icon" size="5x"></fa-icon>
+                            <fa-icon class="hover:text-green-600 xs:hidden md:block" [icon]="icon.icon" size="5x"></fa-icon>
                         </a>
                     </div>
                 </div>

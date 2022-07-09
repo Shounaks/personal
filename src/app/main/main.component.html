@@ -1,15 +1,15 @@
-<div class="hero min-h-screen bg-base-200">
-  <div class="hero-content flex-col lg:flex-row text-center">
+<div class="sm:hero min-h-screen sm:bg-base-200">
+  <div class="sm:hero-content flex-col lg:flex-row text-center">
     <div class="indicator">
-      <span class="indicator-item indicator-bottom hover:animate-pulse">
+      <span class="indicator-item indicator-bottom hover:animate-pulse sm:block hidden">
         <img src="assets/ClassAvGold.png" alt="">
       </span>
-      <img src="assets/tempPhoto.jpg" class="max-w-fit rounded-lg" />
+      <img src="assets/tempPhoto.jpg" class="max-w-fit rounded-lg md:block hidden" />
     </div>
-    <div class="max-w-lg">
-      <div class="bg-base-200 grid w-full flex-grow gap-3 rounded-xl rounded-tl-none p-6">
+    <div class="sm:max-w-lg">
+      <div class="sm:bg-base-200 grid w-full flex-grow gap-3 rounded-xl rounded-tl-none p-6">
         <div class="flex items-center space-x-2 custom-mockup-code">
-          <div class="avatar">
+          <div class="avatar  sm:block hidden">
             <div class="mask mask-hexagon bg-base-content h-16 w-16 bg-opacity-10 p-px">
               <img src="assets/Angra.webp" class="mask mask-hexagon">
             </div>
@@ -26,7 +26,8 @@
             </div>
           </div>
         </div>
-        <div class="divider text-base-content/60 m-0">Attribute Sheet</div>
+        <div class="divider text-base-content/60 m-0 sm:block hidden">Attribute Sheet</div>
+        <div class="sm:block hidden">
         <div class="flex items-center p-1">
           <span class="text-base-content/70 w-48 text-xs">Strength</span>
           <progress value="80" max="100" class="progress progress-error"></progress>
@@ -45,19 +46,21 @@
         <div class="flex items-center p-1"><span class="text-base-content/70 w-48 text-xs">Charisma</span>
           <progress max="100" value="100" class="progress progress-accent"></progress>
         </div>
+        </div>
         <div class="divider">Description</div>
         <div class="text-justify">
-          <span class="highlight backdrop-invert">Computer Science Graduate</span> with a passion to learn new
-          technologies. Currently a <span class="highlight backdrop-invert">Systems Engineer @Infosys</span> on a
+          <span class="sm:highlight sm:backdrop-invert sm:font-normal sm:text-white text-warning font-bold">Computer Science Graduate</span> with a passion to learn new
+          technologies. Currently a <span class="sm:highlight sm:backdrop-invert sm:font-normal sm:text-white text-warning font-bold">Systems Engineer @ Infosys</span> on a
           [Confidential] project.
           Having completed my training in the JAVA-Angular stream with 92% Avg. <span
-            class="highlight backdrop-invert">Microservices using Spring Boot Framework</span>
+            class="sm:highlight sm:backdrop-invert sm:font-normal sm:text-white text-warning font-bold">Microservices using Spring Boot Framework</span>
           is my Forte.
           <br><br>
-          Check my Hobbies section for more info about me or goto Experience/Skill Section for Project and Technical
-          stuff.
-          <br><br>
-          Waiting to meet you in real life...
+          <span class="sm:block hidden">
+            Check my Hobbies section for more info about me or goto Experience/Skill Section for Project and Technical stuff.
+            <br><br>
+            Waiting to meet you in real life...
+          </span>
         </div>
       </div>
     </div>
