@@ -42,45 +42,45 @@ export class SkillComponent implements OnInit {
     let typescript:Skill= {
       name: "Typescript",
       fontAwesomeIcon: faJsSquare,
-      skillInfo: "Javascript but better and safer 😂",
+      skillInfo: "Javascript but better and safer 😂, also Great tooling support with IntelliSense",
       backgroundImage: "assets/technology/angular.png",
-      Profeciency: 5
+      Profeciency: 4
     }
     let javascript:Skill= {
       name: "Javascript",
       fontAwesomeIcon: faJsSquare,
-      skillInfo: "Trained in Angular by Infosys",
+      skillInfo: "Basic good-ol' Javascript, the easiest thing to make website in, but very primitive as compared to other Languages.",
       backgroundImage: "assets/technology/angular.png",
-      Profeciency: 5
+      Profeciency: 3
     }
     let vue:Skill= {
       name: "Vue",
       fontAwesomeIcon: faVuejs,
-      skillInfo: "Trained in Angular by Infosys",
+      skillInfo: "Builds on top of standard HTML, CSS and JavaScript with intuitive API and world-class documentation.",
       backgroundImage: "assets/technology/angular.png",
-      Profeciency: 2
+      Profeciency: 1
     }
     let svelte:Skill= {
       name: "Svelte",
       fontAwesomeIcon: faJsSquare,
-      skillInfo: "Trained in Angular by Infosys",
+      skillInfo: "Instead of using techniques like virtual DOM diffing, Svelte writes code that surgically updates the DOM when the state of your app changes.",
       backgroundImage: "assets/technology/angular.png",
       Profeciency: 1
     }
     let css:Skill= {
       name: "CSS3",
       fontAwesomeIcon: faCss3Alt,
-      skillInfo: "Trained in Angular by Infosys",
+      skillInfo: "Cascading Style Sheet used to add properties to normal HTML elements!",
       backgroundImage: "assets/technology/angular.png",
-      Profeciency: 1
+      Profeciency: 2
     }
-    //personal\src\assets\technology
+
     let html:Skill= {
       name: "HTML5",
       fontAwesomeIcon: faHtml5,
-      skillInfo: "Trained in Angular by Infosys",
+      skillInfo: "<!doctype html> Bruh!",
       backgroundImage: "assets/technology/html5.png",
-      Profeciency: 1
+      Profeciency: 3
     }
     let frontend:Skillset = {
       name: "Frontend",
@@ -90,49 +90,56 @@ export class SkillComponent implements OnInit {
 
     let oracle:Skill= {
       name: "Oracle Database 11g and 13c",
-      skillInfo: "Trained in Angular by Infosys",
+      skillInfo: "One of the best and tested databases in the industry when it comes to Relational Databases",
       backgroundImage: "assets/technology/angular.png",
       fontAwesomeIcon: faDatabase,
       Profeciency: 4
     }
     let mysql:Skill= {
       name: "MySQL and MySQL Workbench",
+      skillInfo: "Since Oracle needs money xD, why not learn something free & Open Source",
       fontAwesomeIcon: faDatabase,
-      skillInfo: "Trained in Angular by Infosys",
       backgroundImage: "assets/technology/angular.png",
       Profeciency: 4
     }
     let java:Skill= {
-      name: "Java (Spring Boot Ecosystem)",
+      name: "Java",
       fontAwesomeIcon: faJava,
-      skillInfo: "Trained in Angular by Infosys",
+      skillInfo: "Bedrock (Edition) Of all enterprise systems, most reliable Programming currently",
       backgroundImage: "assets/technology/angular.png",
-      Profeciency: 4
+      Profeciency: 5
+    }
+    let springBoot:Skill= {
+      name: "Spring Boot",
+      fontAwesomeIcon: faJava,
+      skillInfo: "The Spring Ecosystem provides IOC and other awesome features, along with Spring Boot its a absolute Banger of an ecosystem!🤩",
+      backgroundImage: "assets/technology/angular.png",
+      Profeciency: 5
     }
     let backend:Skillset = {
       name: "Backend",
-      skills: [oracle,mysql,java],
+      skills: [oracle,mysql,java,springBoot],
       description: "Developing Infrastructure that will handle and store precious data"
     }
     
     let docker:Skill= {
       name: "Docker",
       fontAwesomeIcon: faDocker,
-      skillInfo: "Trained in Angular by Infosys",
+      skillInfo: "Ensuring that our code will run of any machine (((ofc inside containers))).",
       backgroundImage: "assets/technology/angular.png",
-      Profeciency: 4
+      Profeciency: 3
     }
     let gcp:Skill= {
       name: "Google Cloud Platform",
       fontAwesomeIcon: faGooglePlusSquare,
-      skillInfo: "Trained in Angular by Infosys",
+      skillInfo: "I know a basic GCP services and mainly used this to check logs of multiple microservices interacting with each other.",
       backgroundImage: "assets/technology/angular.png",
-      Profeciency: 4
+      Profeciency: 2
     }
     let swagger:Skill= {
       name: "Swagger - Documentation & CodeGen",
       fontAwesomeIcon: faBookAtlas,
-      skillInfo: "Trained in Angular by Infosys",
+      skillInfo: "Keeping the Documentation part aside, which is truely a plus, It provides CodeGen meaning we dont even need to write Endpoints or DTO and update API extremely quickly!",
       backgroundImage: "assets/technology/angular.png",
       Profeciency: 4
     }
@@ -148,6 +155,9 @@ export class SkillComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getNumberOfStars(profeciency:number):Array<Number>{
+    return new Array(profeciency);
+  }
 }
 
 interface Skillset{
