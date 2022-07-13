@@ -1,6 +1,6 @@
 <div class="min-h-screen m-0 h-screen bg-base-200">
     <div class="p-10 bg-base-200">
-        <div class="divider text-center sm:text-lg md:text-7xl md:my-10 font-bold uppercase">
+        <div class="divider text-center sm:text-lg md:text-7xl md:my-10 font-bold uppercase md:pb-10">
             Skill Sheet
         </div>
         <div class="w-full h-full">
@@ -27,6 +27,7 @@
                                             <div class="divider pb-0 mb-0"></div>
                                             <div class="rating gap-2 flex justify-around card-actions w-full hover:scale-110 transition-all ease-linear" aria-disabled="true">
                                                 <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500 pointer-events-none" *ngFor="let stars of getNumberOfStars(item.Profeciency)" disabled/>
+                                                <input type="radio" name="rating-4" class="mask mask-star-2 pointer-events-none bg-gray-900" *ngFor="let stars of getNumberOfMissingStars(item.Profeciency)" disabled/>
                                             </div>
                                         </div>
                                     </div>
@@ -34,19 +35,20 @@
                                 <div class="block md:hidden border-0 card-compact">
                                     <figure><img class="md:block hidden rounded-3xl" [src]="item.backgroundImage" /></figure>
                                     <div class="md:card-body">
-                                        <h3 class="sm:card-title text-yellow-600">{{item.name}}</h3>
+                                        <h3 class="sm:card-title">{{item.name}}</h3>
                                         <p class="sm:p-0 p-2" *ngIf="item.skillInfo">{{item.skillInfo}}</p>
                                         <span class="visible sm:hidden text-green-500 p-2">Ratings: {{item.Profeciency}} / 5</span>
-                                        <div class="divider pb-0 mb-0"></div>
-                                        <div class="hidden sm:flex rating gap-2 justify-center w-full hover:scale-110 transition-all ease-linear">
-                                            <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500 pointer-events-none" *ngFor="let stars of getNumberOfStars(item.Profeciency)" disabled/>
+                                        <div class="hidden sm:flex rating gap-2 w-full hover:scale-110 transition-all ease-linear my-2">
+                                            <input type="radio" name="rating-4" class="mask mask-star-2 pointer-events-none bg-green-600" *ngFor="let stars of getNumberOfStars(item.Profeciency)" disabled/>
+                                            <input type="radio" name="rating-4" class="mask mask-star-2 pointer-events-none bg-gray-900" *ngFor="let stars of getNumberOfMissingStars(item.Profeciency)" disabled/>
                                         </div>
+                                        <div class="divider pb-0 mb-0"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-base-300 sm:basis-1/2 text-left p-5 rounded-3xl">[More Content Coming Soon!!]</div>
+                    <div class="md:bg-base-300 sm:basis-1/2 text-left sm:p-5 rounded-3xl">[More Content Coming Soon!!]</div>
                 </div>
             </div>
         </div>

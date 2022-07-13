@@ -158,6 +158,17 @@ export class SkillComponent implements OnInit {
   getNumberOfStars(profeciency:number):Array<Number>{
     return new Array(profeciency);
   }
+
+  getNumberOfMissingStars(profeciency:number):Array<Number>{
+    if(profeciency < 0 || profeciency > 5) return new Array();
+    else return new Array(5- profeciency);
+  }
+
+  getStarColor(profeciency:number):string{
+    if(profeciency === 5){return 'bg-yellow-600'}
+    else if(profeciency === 4){return 'bg-slate-500'}
+    else return 'bg-yellow-800';
+  }
 }
 
 interface Skillset{

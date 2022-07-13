@@ -1,4 +1,4 @@
-<div class="bg-gray-900 fixed top-0 left-0 hidden sm:flex flex-row md:flex-col md:h-screen w-screen md:w-16 m-0 shadow-lg ">
+<div class="bg-gray-900 fixed top-0 left-0 hidden sm:flex flex-row md:flex-col md:h-screen w-screen md:w-16 m-0 shadow-lg " style="z-index: 100;">
   <div class="flex flex-col md:flex-row group" *ngFor="let icon of iconList">
     <div class="invisible hidden group-hover:visible bg-white w-1 h-12 my-2 rounded md:block"></div>
     <a class="sidebar-icon mx-2" [routerLink]=' "/" + icon.redirectTo'>
@@ -9,8 +9,10 @@
   <a class="sidebar-icon">🤹</a>
   <a class="sidebar-icon">📎</a> -->
 </div>
-<div class="w-fit sm:hidden inline-flex flex-row justify-center" *ngFor="let icon of iconList">
-  <a class=" mx-3" [routerLink]=' "/" + icon.redirectTo'>
-    <fa-icon [icon]="icon.icon"></fa-icon>
-  </a>
+<div class="sm:hidden flex justify-center">
+  <div *ngFor="let icon of iconList">
+    <a class=" mx-3" [routerLink]=' "/" + icon.redirectTo'>
+      <fa-icon [icon]="icon.icon"></fa-icon>
+    </a>
+  </div>
 </div>
