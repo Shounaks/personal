@@ -12,6 +12,7 @@ import { SkillComponent } from './skill/skill.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectComponent } from './project/project.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ProjectComponent } from './project/project.component';
     SkillComponent,
     ExperienceComponent,
     ContactComponent,
-    ProjectComponent
+    ProjectComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

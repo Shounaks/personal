@@ -9,6 +9,7 @@ import {faBookAtlas, faDatabase} from '@fortawesome/free-solid-svg-icons'
 })
 export class SkillComponent implements OnInit {
   skillsets:Array<Skillset>;
+  certifications:Array<Certification>;
   
   constructor() {
     let angular:Skill= {
@@ -150,6 +151,41 @@ export class SkillComponent implements OnInit {
     }
 
     this.skillsets = [frontend,backend,tools];
+
+    //Certifications
+    let cyberaryCybSecCertification:Certification = {
+      name: "Opensource Intelligence Fundamentals",
+      certInfo: "Understanding the basic Fundamentals of OPSEC and data Privacy.",
+      backgroundImage: "",
+      certProvider: "Cyberary"
+    }
+    let bcep:Certification = {
+      name: "Business English Level 10",
+      certInfo: "Learning Advance English constructs and nuances. Completed 10 Levels.",
+      backgroundImage: "",
+      certProvider: "Learnship"
+    }
+    let agile:Certification = {
+      name: "Infosys Certified Global Agile Developer",
+      certInfo: "Understand and working in an team where Agile/Scrum is used.",
+      backgroundImage: "",
+      certProvider: "Infosys"
+    }
+    let javaCertifications:Certification = {
+      name: "'Infosys Certified Java SE8 Developer' & 'Infosys Certified L1 Junior Java Programmer'",
+      certInfo: "Knowing the advance stuff of Java which include Logging,FileAccess,Streams,NIO, Regional Languages",
+      backgroundImage: "",
+      certProvider: "Infosys"
+    }
+
+    let frontendCertification:Certification = {
+      name: "Infosys Certified Front End Web Developer",
+      certInfo: "Understanding Basics of Web Technologies from HTML,CSS, JS to Angular Services, Router, Forms, etc",
+      backgroundImage: "",
+      certProvider: "Infosys"
+    }
+
+    this.certifications = [cyberaryCybSecCertification,bcep,agile,javaCertifications,frontendCertification];
   }
 
   ngOnInit(): void {
@@ -183,4 +219,11 @@ interface Skill{
   backgroundImage:string,
   skillInfo:string,
   Profeciency:number
+}
+
+interface Certification{
+  name:string,
+  backgroundImage:string,
+  certInfo:string,
+  certProvider:string
 }

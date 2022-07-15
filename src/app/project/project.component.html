@@ -1,18 +1,39 @@
 <div class="m-0 h-screen bg-base-200">
     <div class="p-10 text-center bg-base-200">
-        <div class="text-2xl md:text-7xl font-bold">Projects Section </div>
-        <div class="divider">College Projects</div>
+        <div class="text-2xl md:text-7xl font-bold">Projects Section
+            <sup class="mx-0 px-0">
+                <div class="dropdown dropdown-end md:-mx-4 px-0">
+                    <label tabindex="0" class="btn btn-circle btn-ghost btn-xs text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            class="w-4 h-4 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </label>
+                    <div tabindex="0" class="card compact dropdown-content shadow bg-base-100 rounded-box w-64">
+                        <div class="card-body">
+                            <p>Interact with the cards to reveal more information</p>
+                        </div>
+                    </div>
+                </div>
+            </sup>
+        </div>
+        <div class="divider">Professional Projects</div>
+        [Content Coming Soon!]
+        <div class="divider">Personal Projects</div>
         <div class="flex flex-row gap-10 flex-wrap justify-center">
-            <div class="card group bg-base-100 w-96 image-full shadow-xl"
+            <div class="card group sm:bg-base-100 w-96 image-full sm:shadow-xl hover:scale-105 hover:ease-in hover:duration-200"
                 *ngFor="let projectData of projects">
                 <figure>
-                    <img src="{{projectData.images[0]}}" />
+                    <img class="hidden sm:block" src="{{projectData.images[0]}}" />
                 </figure>
                 <div class="card-body items-center text-center justify-center">
                     <h2 class="card-title">{{projectData.name}}</h2>
                     <p>{{projectData.description}}</p>
-                    <div class="divider invisible group-hover:transition group-hover:visible group-hover:ease-in group-hover:-translate-y-4" *ngIf="projectData.members">Co-Authored By</div>
-                    <div class=" hidden group-hover:flex card-actions justify-center group-hover:transition group-hover:-translate-y-4">
+                    <div class="divider invisible group-hover:transition group-hover:visible group-hover:ease-in group-hover:-translate-y-4 group-hover:duration-200"
+                        *ngIf="projectData.members">Co-Authored By</div>
+                    <div
+                        class=" hidden group-hover:flex card-actions justify-center group-hover:transition group-hover:-translate-y-4">
                         <div class="avatar" *ngFor="let author of projectData.members">
                             <span class="mask mask-hexagon bg-base-content h-16 w-16 bg-opacity-10 p-px">
                                 <a href="{{author.linkedinUrl}}">
@@ -22,7 +43,8 @@
                         </div>
                     </div>
 
-                    <div class="invisible group-hover:transition group-hover:visible group-hover:ease-in group-hover:-translate-y-4">
+                    <div
+                        class="invisible group-hover:transition group-hover:visible group-hover:ease-in group-hover:-translate-y-4">
                         <div class="divider">Created Using</div>
                         <div class="card-actions justify-center">
                             <div *ngFor="let tech of projectData.technologiesUsed">
