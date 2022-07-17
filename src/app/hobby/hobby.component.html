@@ -3,13 +3,13 @@
         <!-- <div class="divider text-center sm:text-lg md:text-7xl md:mt-10 font-bold uppercase md:pb-10">Hobbies</div> -->
         <div class="w-full h-full">
             <div class="">
-                <div class="text-left sm:p-5 rounded-3xl">
+                <div class="text-left p-5 rounded-3xl">
                     <div class="mb-7 text-xs md:text-base antialiased">
-                        <h1 class="text-xl sm:text-lg font-extrabold text-green-600 md:divider mb-5">
+                        <h1 class="text-xl sm:text-lg font-extrabold text-green-600 md:divider mb-5 text-center">
                             Books Recommendation
                         </h1>
                         <br>
-                        <div class="gap-4 flex flex-row flex-wrap sm:justify-around lg:justify-center">
+                        <div class="hidden gap-4 sm:flex flex-row flex-wrap sm:justify-around lg:justify-center">
                             <div class="group card w-60 overflow-hidden image-full" *ngFor="let book of booksData" >
                                 <figure class="object-cover h-full  group-hover:z-0 z-20"><img src="{{book.imgUrl}}" alt="" srcset=""></figure>
                                 <div class="hidden group-hover:card-body z-30">
@@ -26,14 +26,23 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="sm:hidden py-2" *ngFor="let book of booksData">
+                            <div class="bg-base-300 rounded-xl p-10">
+                                <h2 class="text-center text-lg">{{book.bookName}}</h2>
+                                <br>
+                                <div class="text-green-600">Genre: {{book.genre}} </div>
+                                <br>
+                                <p class="text-justify">{{book.review}}</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="mb-7 text-xs md:text-base antialiased">
-                        <h1 class="text-xl sm:text-lg font-extrabold text-green-600 md:divider mb-5">
+                        <h1 class="text-xl sm:text-lg font-extrabold text-green-600 md:divider mb-5 text-center">
                             Anime Recommendation
                         </h1>
                         <br>
-                        <div class="gap-4 flex flex-row flex-wrap sm:justify-around lg:justify-center">
-                            <div class="group card w-60 overflow-hidden image-full" *ngFor="let anime of animeData" >
+                        <div class="gap-4 hidden sm:flex flex-row flex-wrap sm:justify-around lg:justify-center">
+                            <div class="group card w-60 overflow-hidden image-full" *ngFor="let anime of animeData">
                                 <figure class="object-cover h-full  group-hover:z-0 z-20"><img src="{{anime.imgUrl}}" alt="" srcset=""></figure>
                                 <div class="hidden group-hover:card-body z-30">
                                     <h2 class="hidden group-hover:card-title">{{anime.animeName}}</h2>
@@ -44,6 +53,15 @@
                                         </span>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="sm:hidden py-2" *ngFor="let anime of animeData">
+                            <div class="bg-base-300 rounded-xl p-10">
+                                <h2 class="text-center text-lg">{{anime.animeName}}</h2>
+                                <br>
+                                <div class="text-green-600">Genre: {{anime.genre}} </div>
+                                <br>
+                                <p class="text-justify">{{anime.review}}</p>
                             </div>
                         </div>
                     </div>

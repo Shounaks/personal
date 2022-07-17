@@ -19,6 +19,8 @@ export class ProjectComponent implements OnInit {
 
 
   projects: Array<ProjectData> = [];
+  workProjects: Array<ProjectData> = [];
+
   constructor() { 
     // ProjectContributor Section
     let aakash: ProjectContributor = {
@@ -56,6 +58,7 @@ export class ProjectComponent implements OnInit {
       imageUrl: "assets/shlok.jpg",
       linkedinUrl: "https://www.linkedin.com/in/shlok-k-442a96126/"
     }
+    
     // ProjectData
     let arcania: ProjectData = {
       name: "Arcania - 2D DungeonCrawler",
@@ -102,8 +105,23 @@ export class ProjectComponent implements OnInit {
       images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Magnasco%2C_Alessandro_-_Hermit_in_the_Desert_-_Google_Art_Project.jpg/1024px-Magnasco%2C_Alessandro_-_Hermit_in_the_Desert_-_Google_Art_Project.jpg"],
       technologiesUsed: ["Angular","HTML", "CSS", "JS", "TailwindCSS"]
     }
+    
+    let infosysECSADM: ProjectData = {
+      name: "Airline Reservation System",
+      description: "Working with Java 11 and Spring Boot Microservices to take data from SOAP/REST/Grpc Endpoint and handle it.",
+      bulletPoints:[
+        "Working with Enterprise grade GCP Hosted Cloud Platform",
+        "Implemented Validation Framework in one of the important sub-projects",
+        "Worked to implement multiple checks and balances to the given data",
+        "Experienced Migration of project from Legacy Mainframe system to Java Systems",
+        "Understood how to Modernize API while adding new features while keeping previous features intact."
+      ],
+      images: ["https://cdn.freebiesupply.com/logos/large/2x/sabre-2-logo-png-transparent.png"],
+      technologiesUsed: ["Angular","HTML", "CSS", "JS", "TailwindCSS"]
+    }
     //Add it here! until backend is created!
     this.projects = [personalWebsite,arcania,suvidha,presenT,khamang,gladiator,bfCompiler];
+    this.workProjects = [infosysECSADM];
   }
 
   ngOnInit(): void {
@@ -115,6 +133,7 @@ export class ProjectComponent implements OnInit {
 interface ProjectData{
   name:string,
   description:string,
+  bulletPoints?: Array<string>,
   images: Array<String>
   technologiesUsed:Array<String>, //use Pipe to transform string to Icons using FontAwesome!
   members?: Array<ProjectContributor> 
