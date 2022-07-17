@@ -1,13 +1,55 @@
 <div class="min-h-screen m-0 h-screen bg-base-200">
-    <div class="p-10 bg-base-200">
-        <div class="divider text-center sm:text-lg md:text-7xl md:my-10 font-bold uppercase md:pb-10">Hobbies</div>
-        <div class="w-full h-full bg-base-300">
-            <div class="block md:flex md:flex-row md:gap-5 ">
-                <div class="md:bg-base-300 sm:basis-1/2 text-left sm:p-5 rounded-3xl">
-                    Hello There General Kenobi!
+    <div class="bg-base-200">
+        <!-- <div class="divider text-center sm:text-lg md:text-7xl md:mt-10 font-bold uppercase md:pb-10">Hobbies</div> -->
+        <div class="w-full h-full">
+            <div class="">
+                <div class="text-left sm:p-5 rounded-3xl">
+                    <div class="mb-7 text-xs md:text-base antialiased">
+                        <h1 class="text-xl sm:text-lg font-extrabold text-green-600 md:divider mb-5">
+                            Books Recommendation
+                        </h1>
+                        <br>
+                        <div class="gap-4 flex flex-row flex-wrap sm:justify-around lg:justify-center">
+                            <div class="group card w-60 overflow-hidden image-full" *ngFor="let book of booksData" >
+                                <figure class="object-cover h-full  group-hover:z-0 z-20"><img src="{{book.imgUrl}}" alt="" srcset=""></figure>
+                                <div class="hidden group-hover:card-body z-30">
+                                    <h2 class="hidden group-hover:card-title">{{book.bookName}}</h2>
+                                    <p>Author:
+                                        <span>By {{book.authorName}}</span><br>
+                                        {{book.review}}
+                                    </p>
+                                    <div class="card-actions justify-end flex flex-row flex-wrap">
+                                        <span class="badge badge-outline badge-info" *ngFor="let genre of book.genre">
+                                            {{genre}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-7 text-xs md:text-base antialiased">
+                        <h1 class="text-xl sm:text-lg font-extrabold text-green-600 md:divider mb-5">
+                            Anime Recommendation
+                        </h1>
+                        <br>
+                        <div class="gap-4 flex flex-row flex-wrap sm:justify-around lg:justify-center">
+                            <div class="group card w-60 overflow-hidden image-full" *ngFor="let anime of animeData" >
+                                <figure class="object-cover h-full  group-hover:z-0 z-20"><img src="{{anime.imgUrl}}" alt="" srcset=""></figure>
+                                <div class="hidden group-hover:card-body z-30">
+                                    <h2 class="hidden group-hover:card-title">{{anime.animeName}}</h2>
+                                    <p>{{anime.review}}</p>
+                                    <div class="card-actions justify-end flex flex-row flex-wrap">
+                                        <span class="badge badge-outline badge-info" *ngFor="let genre of anime.genre">
+                                            {{genre}}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="md:bg-base-300 sm:basis-1/2 text-left p-5 rounded-3xl">[More Content Coming Soon!!]</div>
             </div>
+            <!-- <div class="md:bg-base-300 text-left p-5 rounded-3xl">[More Content Coming Soon!!]</div> -->
         </div>
     </div>
 </div>
