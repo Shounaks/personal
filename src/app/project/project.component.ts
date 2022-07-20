@@ -127,6 +127,36 @@ export class ProjectComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getClassColorForTechnology(tech : string) : string {
+    let badge:string = 'badge badge-outline';
+    if (tech === 'C' || tech.includes('Java') || tech === 'C#') {
+      return badge + ' badge-success';
+    } else if(['HTML','CSS','JS','Bootstrap','Bulma'].indexOf(tech) > -1){
+      return badge + ' badge-info';
+    } else if(['Github','Heroku','WebAssembly'].indexOf(tech) > -1) {
+      return badge + ' badge-warning';
+    } else if(['Angular'].indexOf(tech) > -1) {
+      return badge + ' badge-secondary';
+    }else if(['MS-SQL', 'Google FireBase', 'MySQL', 'Oracle'].indexOf(tech) > -1) {
+      return badge + ' badge-error';
+    }else return badge + "";
+  }
+
+  getIconForTechnology(tech : string) : IconDefinition {
+    switch (tech) {
+      case 'unity3D': return this.unityIcon;
+      case 'Github': return this.gitIcon;
+      case 'HTML': return this.htmlIcon;
+      case 'CSS': return this.css3Icon;
+      case 'JS': return this.jsIcon;
+      case 'Java': return this.javaIcon;
+      case 'Angular': return this.angularIcon;
+      case 'C':
+      case 'C#': return this.programmingIcon;
+      default: return this.programmingIcon;
+    }
+  }
+
 }
 
 
