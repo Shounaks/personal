@@ -8,7 +8,7 @@ import { faHome,faMobileRetro,faScrewdriverWrench, faTimeline,faProjectDiagram,f
   templateUrl: './navigationbar.component.html',
   styleUrls: ['./navigationbar.component.css']
 })
-export class NavigationbarComponent implements OnInit {
+export class NavigationbarComponent{
   iconList: Array<NavbarIcon> = [
     {icon: faHome, tooltip: "home", redirectTo: "home"},
     {icon: faXbox, tooltip: "hobby", redirectTo: "hobby"},
@@ -17,12 +17,6 @@ export class NavigationbarComponent implements OnInit {
     {icon: faTimeline, tooltip: "experience", redirectTo: "experience"},
     {icon: faMobileRetro, tooltip: "contact", redirectTo: "contact"}
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
 
 interface NavbarIcon{

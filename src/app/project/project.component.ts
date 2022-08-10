@@ -90,7 +90,7 @@ export class ProjectComponent implements OnInit {
     let khamang: ProjectData = {
       name: "Khamang-Android Cookbook and Sharing app",
       description: "Khamang is a user application that is used to store and share the Recipes of the Food Dishes online built using Android studio and Firebase.",
-      images: ["https://www.sbs.com.au/yourlanguage/sites/sbs.com.au.yourlanguage/files/pav_bhaji.jpg"],
+      images: ["assets/pavbhaji.jpg"],
       technologiesUsed: ["Android Studio","Java","Gradle","Google FireBase", "MySQL"]
     }
     let bfCompiler: ProjectData = {

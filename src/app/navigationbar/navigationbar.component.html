@@ -1,13 +1,16 @@
-<div class="bg-gray-900 fixed top-0 left-0 hidden sm:flex flex-row md:flex-col md:h-screen w-screen md:w-16 m-0 shadow-lg " style="z-index: 100;">
+<div
+  class="bg-gray-900 fixed top-0 left-0 hidden sm:flex flex-row md:flex-col md:h-screen w-screen md:w-16 m-0 shadow-lg"
+  style="z-index: 100;">
   <div class="flex flex-col md:flex-row group" *ngFor="let icon of iconList">
     <div class="invisible hidden group-hover:visible bg-white w-1 h-12 my-2 rounded md:block"></div>
     <a class="sidebar-icon mx-2" [routerLink]=' "/" + icon.redirectTo'>
-      <fa-icon [icon]="icon.icon"></fa-icon>
+      <fa-layers [fixedWidth]="true">
+        <fa-icon [icon]="icon.icon" [title]="icon.tooltip"></fa-icon>
+      </fa-layers>
     </a>
   </div>
-  <!-- <div class="divider px-3"></div>
-  <a class="sidebar-icon">🤹</a>
-  <a class="sidebar-icon">📎</a> -->
+  <div class="divider px-3"></div>
+  <a class="sidebar-icon" href="https://shounaks.github.io/TicTacToe/">❌⭕</a>
 </div>
 <div class="sm:hidden flex justify-center">
   <div *ngFor="let icon of iconList">
@@ -15,4 +18,5 @@
       <fa-icon [icon]="icon.icon"></fa-icon>
     </a>
   </div>
+  <a href="https://shounaks.github.io/TicTacToe/">🎮</a>
 </div>

@@ -18,25 +18,26 @@
                 </div>
             </sup>
         </div>
-        <div class="divider text-xl sm:text-lg font-bold text-green-600">Professional Projects</div>
+        <div class="divider text-xl sm:text-lg font-bold text-green-600">A Collection of Professional As Well As Personal Projects</div>
         <div class="flex flex-row gap-10 flex-wrap justify-center">
-            <div class="card group sm:bg-base-100 w-96 image-full sm:shadow-xl hover:scale-105 hover:ease-in hover:duration-200" *ngFor="let projectData of workProjects">
-                <figure>
-                    <img class="hidden sm:block" src="{{projectData.images[0]}}" />
-                </figure>
-                <div class="card-body items-center text-center justify-center">
-                    <h2 class="card-title">{{projectData.name}}</h2>
-                    <p class="text-justify">{{projectData.description}}</p>
-                    <ul class="hidden group-hover:block text-left p-2" *ngFor="let bulletpoints of projectData.bulletPoints">
-                        <li>▶️ {{bulletpoints}}</li>
-                    </ul>
+            <div>
+                <div class="card group sm:bg-base-100 w-96 image-full sm:shadow-xl border-b-green-600 border-yellow-500  border-8 hover:scale-105 hover:ease-in hover:duration-200" *ngFor="let projectData of workProjects">
+                    <figure>
+                        <img class="hidden sm:block" src="{{projectData.images[0]}}" />
+                    </figure>
+                    <div class="card-body items-center text-center justify-center">
+                        <div class="font-bold text-green-600">Professional</div>
+                        <h2 class="card-title">{{projectData.name}}</h2>
+                        <p class="text-justify">{{projectData.description}}</p>
+                        <ul class="hidden group-hover:block text-left p-2" *ngFor="let bulletpoints of projectData.bulletPoints">
+                            <li class="inline-flex gap-2"><div>➤</div><div class="text-justify">{{bulletpoints}}</div></li>
+                        </ul>
+                        <div class="group-hover:hidden">Interact to See More👇</div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="divider text-xl sm:text-lg font-bold text-green-600">Personal Projects</div>
-        <div class="flex flex-row gap-10 flex-wrap justify-center">
-            <div class="card group sm:bg-base-100 w-96 image-full sm:shadow-xl hover:scale-105 hover:ease-in hover:duration-200"
+            
+            <div class="card group sm:bg-base-100 w-96 image-full sm:shadow-xl hover:scale-105 hover:ease-in hover:duration-200 "
                 *ngFor="let projectData of projects">
                 <figure>
                     <img class="hidden sm:block" src="{{projectData.images[0]}}" />

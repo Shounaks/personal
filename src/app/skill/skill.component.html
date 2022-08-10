@@ -1,6 +1,6 @@
 <div class="min-h-screen m-0 h-screen bg-base-200">
     <div class="p-10 bg-base-200">
-        <div class="divider text-center sm:text-lg md:text-7xl md:my-10 font-bold uppercase md:pb-10">
+        <div class="text-center sm:text-lg md:text-7xl font-bold uppercase md:pb-10">
             Skill Sheet
         </div>
         <div class="w-full h-full">
@@ -23,7 +23,7 @@
                                         <figure><img class="md:block hidden rounded-3xl" [src]="item.backgroundImage" /></figure>
                                         <div class="md:card-body">
                                             <h3 class="card-title">{{item.name}}</h3>
-                                            <p *ngIf="item.skillInfo">{{item.skillInfo}}</p>
+                                            <p class="text-justify" *ngIf="item.skillInfo">{{item.skillInfo}}</p>
                                             <div class="divider pb-0 mb-0"></div>
                                             <div class="rating gap-2 flex justify-around card-actions w-full hover:scale-110 transition-all ease-linear" aria-disabled="true">
                                                 <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500 pointer-events-none" *ngFor="let stars of getNumberOfStars(item.Profeciency)" disabled/>
@@ -57,7 +57,7 @@
                                 <figure><img class="md:block hidden rounded-3xl" [src]="certification.backgroundImage" /></figure>
                                 <div class="card-body">
                                     <div class="card-title text-base text-center">{{certification.name}}</div>
-                                    <p class="text-justify">{{certification.certInfo}}</p>
+                                    <p class="text-justify px-2">{{certification.certInfo}}</p>
                                     <div class="card-actions font-bold justify-end">by {{certification.certProvider}}</div>
                                 </div>
                             </div>
