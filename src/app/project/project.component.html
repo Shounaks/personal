@@ -18,10 +18,10 @@
                 </div>
             </sup>
         </div>
-        <div class="divider text-xl sm:text-lg font-bold text-green-600">A Collection of Professional As Well As Personal Projects</div>
+        <div class="divider text-xs md:text-xl sm:text-lg font-bold text-green-600">A Collection of <span class="hidden md:block">Professional As Well As Personal</span> Projects</div>
         <div class="flex flex-row gap-10 flex-wrap justify-center">
             <div>
-                <div class="card group sm:bg-base-100 w-96 image-full sm:shadow-xl border-b-green-600 border-yellow-500  border-8 hover:scale-105 hover:ease-in hover:duration-200" *ngFor="let projectData of workProjects">
+                <div class="card group sm:bg-base-100 w-96 image-full sm:shadow-xl border-b-green-600 border-yellow-500 border-8 hover:scale-105 hover:ease-in hover:duration-200" *ngFor="let projectData of workProjects">
                     <figure>
                         <img class="hidden sm:block" src="{{projectData.images[0]}}" />
                     </figure>
@@ -30,7 +30,7 @@
                         <h2 class="card-title">{{projectData.name}}</h2>
                         <p class="text-justify">{{projectData.description}}</p>
                         <ul class="hidden group-hover:block text-left p-2" *ngFor="let bulletpoints of projectData.bulletPoints">
-                            <li class="inline-flex gap-2"><div>➤</div><div class="text-justify">{{bulletpoints}}</div></li>
+                            <li class="inline-flex gap-2"><div class="text-yellow-500">➤</div><div class="text-justify">{{bulletpoints}}</div></li>
                         </ul>
                         <div class="group-hover:hidden">Interact to See More👇</div>
                     </div>
@@ -47,8 +47,7 @@
                     <p>{{projectData.description}}</p>
                     <div class="divider invisible group-hover:transition group-hover:visible group-hover:ease-in group-hover:-translate-y-4 group-hover:duration-200"
                         *ngIf="projectData.members">Co-Authored By</div>
-                    <div
-                        class=" hidden group-hover:flex card-actions justify-center group-hover:transition group-hover:-translate-y-4">
+                    <div class=" hidden group-hover:flex card-actions justify-center group-hover:transition group-hover:-translate-y-4">
                         <div class="avatar" *ngFor="let author of projectData.members">
                             <span class="mask mask-hexagon bg-base-content h-16 w-16 bg-opacity-10 p-px">
                                 <a href="{{author.linkedinUrl}}">
@@ -58,8 +57,7 @@
                         </div>
                     </div>
 
-                    <div
-                        class="invisible group-hover:transition group-hover:visible group-hover:ease-in group-hover:-translate-y-4">
+                    <div class="invisible group-hover:transition group-hover:visible group-hover:ease-in group-hover:-translate-y-4">
                         <div class="divider">Created Using</div>
                         <div class="card-actions justify-center">
                             <div *ngFor="let tech of projectData.technologiesUsed">

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faWpforms, IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-main',
@@ -12,7 +14,9 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  resumeFaIcon:IconDefinition = faWpforms;
   startDate = new Date(2020, 9, 23); // 23-SEPTEMBER-2020
+
   public calculateExperience(): number{
     const currentDate = new Date();
     const initialDate = new Date(2020, 9, 1);

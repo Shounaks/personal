@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {faAngular, faBootstrap, faCss3, faCss3Alt, faDocker, faGooglePlusSquare, faHtml5, faJava, faJsSquare, faVuejs, IconDefinition} from '@fortawesome/free-brands-svg-icons';
-import {faBookAtlas, faDatabase} from '@fortawesome/free-solid-svg-icons'
+import {faArrowUpRightFromSquare, faBookAtlas, faDatabase} from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-skill',
@@ -10,8 +10,10 @@ import {faBookAtlas, faDatabase} from '@fortawesome/free-solid-svg-icons'
 export class SkillComponent implements OnInit {
   skillsets:Array<Skillset>;
   certifications:Array<Certification>;
+  credentialIcon:IconDefinition;
   
   constructor() {
+    this.credentialIcon = faArrowUpRightFromSquare;
     let angular:Skill= {
       name: "Angular",
       fontAwesomeIcon: faAngular,
@@ -157,7 +159,8 @@ export class SkillComponent implements OnInit {
       name: "Opensource Intelligence Fundamentals",
       certInfo: "Understanding the basic Fundamentals of OPSEC and data Privacy.",
       backgroundImage: "",
-      certProvider: "Cyberary"
+      certProvider: "Cyberary",
+      credentialUrl: "#WillBeSentByBackend"
     }
     let bcep:Certification = {
       name: "Business English Level 10",
@@ -225,5 +228,6 @@ interface Certification{
   name:string,
   backgroundImage:string,
   certInfo:string,
-  certProvider:string
+  certProvider:string,
+  credentialUrl?:string
 }

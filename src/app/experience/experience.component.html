@@ -9,41 +9,75 @@
                     <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-gray-900 rounded-box">
                         <input type="checkbox" checked />
                         <div class="collapse-title font-medium">
-                            <div class="inline-flex gap-2">
-                                <div class="avatar">
+                            <div class="md:flex sm:gap-2 sm:mb-2">
+                                <div class="avatar h-fit">
                                     <div class="w-24 rounded">
                                         <img src="assets/infosys.jpg" />
                                     </div>
                                 </div>
-                                <div class="text-left align-middle">
-                                    <p class="md:text-xl">Infosys Inc.</p>
-                                    <p class="sm:visible invisible">Bengaluru, Karnataka</p>
+                                <div class="">
+                                    <div class="text-left align-middle">
+                                        <p class="md:text-4xl font-extrabold">Infosys Inc.</p>
+                                        <table>
+                                            <tr>
+                                                <td>Location:</td>
+                                                <td class="text-cyan-400">Bengaluru,India</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Designation:</td>
+                                                <td class="text-lime-500">Senior System Engineer</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Skills:</td>
+                                                <td class="text-fuchsia-300">Java, Spring, Spring Boot,Spring(REST + Reactive), Angular 14, Hibernate</td>
+                                            </tr>
+                                        </table>
+                                        <!-- <div class="inline-flex gap-2">
+                                            <div>Highest Designation:</div>
+                                            <div class="text-lime-500">Senior System Engineer</div>
+                                        </div>
+                                        <div class="inline-flex gap-2">
+                                            <div>Skills:</div>
+                                            <div class="text-fuchsia-300">Java, Advance Java, Spring, Spring Boot,Spring(REST + Reactive), Angular 14, Hibernate</div>
+                                        </div> -->
+                                        <div class="divider w-full mt-0 mb-2"></div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="text-justify">Infosys Limited is an Indian multinational information technology company that provides business consulting, information technology and outsourcing services.</div>
                         </div>
                         <div class="collapse-content">
                             <div class="divider">Information</div>
                             <ul class="steps steps-vertical w-full">
                                 <li data-content="●" class="step step-success">
                                     <div class="text-left border-base-300 my-4">
-                                        <h1 class="font-extrabold">Senior System Engineer</h1>
+                                        <h1 class="font-medium text-lime-500">Senior System Engineer</h1>
                                         <p>Jul 2022 - Present</p>
-                                        <p>Skills:</p>
+                                        <div class="inline-flex gap-2">
+                                            <p>Skills Learned:</p>
+                                            <p class="text-fuchsia-300">Codegen · Software Design Patterns · Google Cloud Platform (GCP) · Code Refactoring · Technical Debt Reduction  · Code Reviewing · Bug Detection and Fixing</p>
+                                        </div>
                                     </div>
                                 </li>
                                 <!-- <div class="divider"></div> -->
                                 <li data-content="●" class="step step-success">
                                     <div class="text-left border-base-300 my-4">
-                                        <h1 class="font-extrabold">System Engineer</h1>
+                                        <h1 class="font-medium text-lime-500">System Engineer</h1>
                                         <p>Apr 2021 - Jun 2022</p>
-                                        <p>Skills:</p>
+                                        <div class="inline-flex gap-2">
+                                            <p>Skills Learned:</p>
+                                            <p class="text-fuchsia-300">Java · Bitbucket · Microservices · Spring Boot · Eureka Server · Cloud Config · Feign · Spring Reactor</p>
+                                        </div>
                                     </div>
                                 </li>
                                 <li data-content="🔝" class="step step-success">
                                     <div class="text-left border-base-300 my-4">
-                                        <h1 class="font-extrabold">System Engineer Trainee</h1>
+                                        <h1 class="font-medium text-lime-500">System Engineer Trainee</h1>
                                         <p>Nov 2020 - Apr 2021</p>
-                                        <p>Skills:</p>
+                                        <div class="inline-flex gap-2">
+                                            <p>Skills Learned:</p>
+                                            <p class="text-fuchsia-300">RESTful WebServices · Bootstrap · Full-Stack Development · Angular · Spring Framework · Mockito</p>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>
@@ -53,11 +87,11 @@
                 <div class="md:bg-base-300 sm:basis-1/2 text-left sm:p-5 rounded-3xl">
                     <div class="divider text-green-600 font-bold">Educational Summary</div>
                     <div class="p-4" *ngFor="let education of educationInfo">
-                        <div class="py-5">
+                        <div class="p-5 hover:bg-gray-900 rounded-xl">
                             <div class="text-2xl font-extrabold">📑 {{education.educationType}}</div>
                             <div class="px-4">
                                 <div>🏫 {{education.institutionName}}</div>
-                                <div class="text-justify w-full">🎖️ {{education.extraInfo}} <div class="text-right">📅 {{getEducationTimeLineAsString(education)}}</div></div>
+                                <div class="text-justify w-full">🎖️ {{education.extraInfo}} <div class="divider"></div> <div class="text-right">📅 {{getEducationTimeLineAsString(education)}}</div></div>
                             </div>
                         </div>
                     </div>

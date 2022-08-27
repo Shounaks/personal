@@ -19,45 +19,55 @@
             <div class="text-base-content/70 text-sm font-thin">Human - Developer - System Engineer@Infosys</div>
             <div class="text-base-content/70 text-sm font-thin">
               Experience:
+              <!-- Refactor this method calls -->
               <span class="font-extrabold text-warning">
                 {{ calculateExperienceInYears() }} Year {{calculateExperience()%12}} Months
               </span>
-              <div class="stat-desc">({{getStartDateInLocaleDateFormat()}} - {{getCurrentDateInLocaleDateFormat()}})</div>
+              <div class="stat-desc">
+                ({{getStartDateInLocaleDateFormat()}} - {{getCurrentDateInLocaleDateFormat()}})
+              </div>
             </div>
           </div>
         </div>
         <div class="divider text-base-content/60 m-0 sm:block hidden">Attribute Sheet</div>
         <div class="sm:block hidden">
-        <div class="flex items-center p-1">
-          <span class="text-base-content/70 w-48 text-xs">Strength</span>
-          <progress value="80" max="100" class="progress progress-error"></progress>
-        </div>
-        <div class="flex items-center p-1"><span class="text-base-content/70 w-48 text-xs">Agility</span>
-          <progress value="70" max="100" class="progress progress-success"></progress>
-        </div>
-        <div class="flex items-center p-1">
-          <span class="text-base-content/70 w-48 text-xs">Intelligence</span>
-          <progress value="60" max="100" class="progress progress-info"></progress>
-        </div>
-        <div class="flex items-center p-1">
-          <span class="text-base-content/70 w-48 text-xs">Luck</span>
-          <progress value="90" max="100" class="progress progress-warning"></progress>
-        </div>
-        <div class="flex items-center p-1"><span class="text-base-content/70 w-48 text-xs">Charisma</span>
-          <progress max="100" value="100" class="progress progress-accent"></progress>
-        </div>
+          <!-- TODO: Use Grid To Implement this -->
+          <div class="flex items-center p-1">
+            <span class="text-base-content/70 w-48 text-xs">Strength</span>
+            <progress value="80" max="100" class="progress progress-error"></progress>
+          </div>
+          <div class="flex items-center p-1"><span class="text-base-content/70 w-48 text-xs">Agility</span>
+            <progress value="70" max="100" class="progress progress-success"></progress>
+          </div>
+          <div class="flex items-center p-1">
+            <span class="text-base-content/70 w-48 text-xs">Intelligence</span>
+            <progress value="60" max="100" class="progress progress-info"></progress>
+          </div>
+          <div class="flex items-center p-1">
+            <span class="text-base-content/70 w-48 text-xs">Luck</span>
+            <progress value="90" max="100" class="progress progress-warning"></progress>
+          </div>
+          <div class="flex items-center p-1">
+            <span class="text-base-content/70 w-48 text-xs">Charisma</span>
+            <progress max="100" value="100" class="progress progress-accent"></progress>
+          </div>
         </div>
         <div class="divider">Description</div>
         <div class="text-justify">
-          <span class="sm:highlight sm:backdrop-invert sm:font-normal sm:text-white text-warning font-bold">Computer Science Graduate</span> with a passion to learn new
-          technologies. Currently a <span class="sm:highlight sm:backdrop-invert sm:font-normal sm:text-white text-warning font-bold">Systems Engineer @ Infosys</span> on a
+          <span class="sm:backdrop-invert sm:font-normal sm:text-white text-warning font-bold">Computer Science
+            Graduate</span> with a passion to learn new
+          technologies. Currently a <span
+            class="sm:backdrop-invert sm:font-normal sm:text-white text-warning font-bold">Systems Engineer @
+            Infosys</span> on a
           [Confidential] project.
           Having completed my training in the JAVA-Angular stream with 92% Avg. <span
-            class="sm:highlight sm:backdrop-invert sm:font-normal sm:text-white text-warning font-bold">Microservices using Spring Boot Framework</span>
+            class="sm:backdrop-invert sm:font-normal sm:text-white text-warning font-bold">Microservices using Spring
+            Boot Framework</span>
           is my Forte.
           <br><br>
           <span class="sm:block hidden">
-            Check my Hobbies section for more info about me or goto Experience/Skill Section for Project and Technical stuff.
+            Check my Hobbies section for more info about me or goto Experience/Skill Section for Project and Technical
+            stuff.
             <br><br>
             Waiting to meet you in real life...
           </span>

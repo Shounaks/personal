@@ -53,12 +53,19 @@
                             Certifications
                         </h1>
                         <div class="flex flex-wrap flex-row overflow-auto  my-4" *ngFor="let certification of certifications">
-                            <div class="card sm:bg-base-200 image-full w-full">
+                            <div class="card sm:bg-base-200 image-full w-full my-2">
                                 <figure><img class="md:block hidden rounded-3xl" [src]="certification.backgroundImage" /></figure>
                                 <div class="card-body">
                                     <div class="card-title text-base text-center">{{certification.name}}</div>
                                     <p class="text-justify px-2">{{certification.certInfo}}</p>
-                                    <div class="card-actions font-bold justify-end">by {{certification.certProvider}}</div>
+                                    <div class="card-actions font-bold justify-end">
+                                        <a href="">
+                                            {{certification.certProvider}} <fa-icon [icon]="credentialIcon"></fa-icon>
+                                        </a>
+                                    </div>
+                                    <div [ngClass]="{'badge badge-outline transition ease-in-out delay-1000 hover:border-2 p-4':true, 'btn-disabled opacity-50 border-gray-900': certification.credentialUrl == null}">
+                                        <a [href]="certification.credentialUrl">Show credential <fa-icon class="ml-2" [icon]="credentialIcon"></fa-icon></a>
+                                    </div>
                                 </div>
                             </div>
                             <!-- <div>Infosys Certified Agile</div> -->
