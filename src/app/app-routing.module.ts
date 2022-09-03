@@ -9,7 +9,7 @@ import { ProjectComponent } from './project/project.component';
 import { SkillComponent } from './skill/skill.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  // {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: MainComponent},
   {path: 'hobby', component: HobbyComponent},
   {path: 'skillset', component: SkillComponent},
