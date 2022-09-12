@@ -19,7 +19,7 @@
                                         {{book.review}}
                                     </p>
                                     <div class="card-actions justify-end flex flex-row flex-wrap">
-                                        <span class="badge badge-outline badge-info" *ngFor="let genre of book.genre">
+                                        <span class="badge badge-outline badge-info kbd kbd-xs" *ngFor="let genre of book.genre">
                                             {{genre}}
                                         </span>
                                     </div>
@@ -46,7 +46,7 @@
                                 <figure class="object-cover h-full  group-hover:z-0 z-20"><img src="{{anime.imgUrl}}" alt="" srcset=""></figure>
                                 <div class="hidden group-hover:card-body z-30">
                                     <h2 class="hidden group-hover:card-title">{{anime.animeName}}</h2>
-                                    <div class="badge badge-outline badge-info" *ngFor="let genre of anime.genre">
+                                    <div class="badge badge-outline badge-info kbd kbd-xs" *ngFor="let genre of anime.genre">
                                         {{genre}}
                                     </div>
                                     <p>{{anime.review}}</p>

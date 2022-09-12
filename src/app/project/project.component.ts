@@ -128,7 +128,7 @@ export class ProjectComponent implements OnInit {
   }
 
   getClassColorForTechnology(tech : string) : string {
-    let badge:string = 'badge badge-outline';
+    let badge:string = 'badge badge-outline kbd kbd-xs hover:invert';
     if (tech === 'C' || tech.includes('Java') || tech === 'C#') {
       return badge + ' badge-success';
     } else if(['HTML','CSS','JS','Bootstrap','Bulma'].indexOf(tech) > -1){

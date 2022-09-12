@@ -146,9 +146,17 @@ export class SkillComponent implements OnInit {
       backgroundImage: "assets/technology/swagger.png",
       Profeciency: 4
     }
+    let postman:Skill= {
+      name: "Postman - API Testing and Developement",
+      fontAwesomeIcon: faBookAtlas,
+      skillInfo: "Its just a API For People who are too lazy to write CURL commands 😂😂, on a serious note, sharing the collections and testing is easier with Postman.",
+      backgroundImage: "assets/technology/swagger.png",
+      Profeciency: 4
+    }
+    
     let tools:Skillset = {
       name: "Tools",
-      skills: [docker,gcp,swagger],
+      skills: [docker,gcp,swagger,postman],
       description: "Developing Infrastructure that will handle and store precious data"
     }
 
@@ -203,6 +211,7 @@ export class SkillComponent implements OnInit {
     else return new Array(5- profeciency);
   }
 
+  // todo: @Depricated
   getStarColor(profeciency:number):string{
     if(profeciency === 5){return 'bg-yellow-600'}
     else if(profeciency === 4){return 'bg-slate-500'}

@@ -13,34 +13,51 @@
                             </h1>
                             <span>{{skillset.description}}</span>
                             <br>
-                            <div class="inline-flex mx-5 gap-2 my-1 " *ngFor="let item of skillset.skills">
+                            <div class="inline-flex mx-5 gap-2 my-1" *ngFor="let item of skillset.skills">
                                 <div class="hidden md:block md:dropdown dropdown-hover cursor-pointer">
                                     <div tabindex="0" class="m-1 gap-2">
-                                        <fa-icon class="mx-2" [icon]="item.fontAwesomeIcon"></fa-icon>
-                                        <span>{{item.name}}</span>
+                                        <span class="kbd kbd-md hover:invert">
+                                            <fa-icon class="mr-2" [icon]="item.fontAwesomeIcon"></fa-icon>{{item.name}}
+                                        </span>
                                     </div>
-                                    <div tabindex="0" class="dropdown-content border-0 card card-compact md:w-64 md:p-2 shadow image-full md:text-primary-content sm:backdrop-opacity-95">
-                                        <figure><img class="md:block hidden rounded-3xl" [src]="item.backgroundImage" /></figure>
+                                    <div tabindex="0"
+                                        class="dropdown-content border-0 card card-compact md:w-64 md:p-2 shadow image-full md:text-primary-content sm:backdrop-opacity-95">
+                                        <figure><img class="md:block hidden rounded-3xl" [src]="item.backgroundImage" />
+                                        </figure>
                                         <div class="md:card-body">
                                             <h3 class="card-title">{{item.name}}</h3>
                                             <p class="text-justify" *ngIf="item.skillInfo">{{item.skillInfo}}</p>
                                             <div class="divider pb-0 mb-0"></div>
-                                            <div class="rating gap-2 flex justify-around card-actions w-full hover:scale-110 transition-all ease-linear" aria-disabled="true">
-                                                <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500 pointer-events-none" *ngFor="let stars of getNumberOfStars(item.Profeciency)" disabled/>
-                                                <input type="radio" name="rating-4" class="mask mask-star-2 pointer-events-none bg-gray-900" *ngFor="let stars of getNumberOfMissingStars(item.Profeciency)" disabled/>
+                                            <div class="rating gap-2 flex justify-around card-actions w-full hover:scale-110 transition-all ease-linear"
+                                                aria-disabled="true">
+                                                <input type="radio" name="rating-4"
+                                                    class="mask mask-star-2 bg-green-500 pointer-events-none"
+                                                    *ngFor="let stars of getNumberOfStars(item.Profeciency)" disabled />
+                                                <input type="radio" name="rating-4"
+                                                    class="mask mask-star-2 pointer-events-none bg-gray-900"
+                                                    *ngFor="let stars of getNumberOfMissingStars(item.Profeciency)"
+                                                    disabled />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="block md:hidden border-0 card-compact">
-                                    <figure><img class="md:block hidden rounded-3xl" [src]="item.backgroundImage" /></figure>
+                                    <figure><img class="md:block hidden rounded-3xl" [src]="item.backgroundImage" />
+                                    </figure>
                                     <div class="md:card-body">
                                         <h3 class="sm:card-title">{{item.name}}</h3>
                                         <p class="sm:p-0 p-2" *ngIf="item.skillInfo">{{item.skillInfo}}</p>
-                                        <span class="visible sm:hidden text-green-500 p-2">Ratings: {{item.Profeciency}} / 5</span>
-                                        <div class="hidden sm:flex rating gap-2 w-full hover:scale-110 transition-all ease-linear my-2">
-                                            <input type="radio" name="rating-4" class="mask mask-star-2 pointer-events-none bg-green-600" *ngFor="let stars of getNumberOfStars(item.Profeciency)" disabled/>
-                                            <input type="radio" name="rating-4" class="mask mask-star-2 pointer-events-none bg-gray-900" *ngFor="let stars of getNumberOfMissingStars(item.Profeciency)" disabled/>
+                                        <span class="visible sm:hidden text-green-500 p-2">Ratings: {{item.Profeciency}}
+                                            / 5</span>
+                                        <div
+                                            class="hidden sm:flex rating gap-2 w-full hover:scale-110 transition-all ease-linear my-2">
+                                            <input type="radio" name="rating-4"
+                                                class="mask mask-star-2 pointer-events-none bg-green-600"
+                                                *ngFor="let stars of getNumberOfStars(item.Profeciency)" disabled />
+                                            <input type="radio" name="rating-4"
+                                                class="mask mask-star-2 pointer-events-none bg-gray-900"
+                                                *ngFor="let stars of getNumberOfMissingStars(item.Profeciency)"
+                                                disabled />
                                         </div>
                                         <div class="divider pb-0 mb-0"></div>
                                     </div>
@@ -52,19 +69,27 @@
                         <h1 class="text-xl sm:text-lg font-bold text-green-600 md:divider mb-5">
                             Certifications
                         </h1>
-                        <div class="flex flex-wrap flex-row overflow-auto  my-4" *ngFor="let certification of certifications">
+                        <div class="flex flex-wrap flex-row overflow-auto  my-4"
+                            *ngFor="let certification of certifications">
                             <div class="card sm:bg-base-200 image-full w-full my-2">
-                                <figure><img class="md:block hidden rounded-3xl" [src]="certification.backgroundImage" /></figure>
+                                <figure><img class="md:block hidden rounded-3xl"
+                                        [src]="certification.backgroundImage" /></figure>
                                 <div class="card-body">
                                     <div class="card-title text-base text-center">{{certification.name}}</div>
                                     <p class="text-justify px-2">{{certification.certInfo}}</p>
-                                    <div class="card-actions font-bold justify-end">
-                                        <a href="">
-                                            {{certification.certProvider}} <fa-icon [icon]="credentialIcon"></fa-icon>
-                                        </a>
-                                    </div>
-                                    <div [ngClass]="{'badge badge-outline transition ease-in-out delay-1000 hover:border-2 p-4':true, 'btn-disabled opacity-50 border-gray-900': certification.credentialUrl == null}">
-                                        <a [href]="certification.credentialUrl">Show credential <fa-icon class="ml-2" [icon]="credentialIcon"></fa-icon></a>
+                                    <div class="card-actions justify-end p-0 -mr-5 -mb-5 bl-0">
+                                        <div
+                                            [ngClass]="{'badge badge-outline kbd kbd-md transition ease-in-out delay-1000 hover:border-2':true, 'btn-disabled opacity-50 border-gray-900': certification.credentialUrl == null}">
+                                            <a [href]="certification.credentialUrl">Show credential <fa-icon
+                                                    class="ml-2" [icon]="credentialIcon"></fa-icon></a>
+                                        </div>
+                                        <div
+                                            class="badge badge-outline badge-info kbd kbd-md transition ease-in-out delay-1000 hover:border-2">
+                                            <a href="" class="">
+                                                {{certification.certProvider}} <fa-icon [icon]="credentialIcon">
+                                                </fa-icon>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
