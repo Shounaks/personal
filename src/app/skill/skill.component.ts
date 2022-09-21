@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {faAngular, faBootstrap, faCss3, faCss3Alt, faDocker, faGooglePlusSquare, faHtml5, faJava, faJsSquare, faVuejs, IconDefinition} from '@fortawesome/free-brands-svg-icons';
-import {faArrowUpRightFromSquare, faBookAtlas, faDatabase} from '@fortawesome/free-solid-svg-icons'
+import {faAngular, faBootstrap, faCloudversify, faCss3, faCss3Alt, faDocker, faGooglePlusSquare, faHtml5, faJava, faJsSquare, faSearchengin, faVuejs, IconDefinition} from '@fortawesome/free-brands-svg-icons';
+import {faArrowUpRightFromSquare, faBookAtlas, faDatabase, faDiagramProject, faShieldDog, faTableColumns} from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-skill',
@@ -119,9 +119,16 @@ export class SkillComponent implements OnInit {
       backgroundImage: "assets/technology/spring-boot.jpg",
       Profeciency: 5
     }
+    let hibernate:Skill= {
+      name: "Hibernate ORM",
+      fontAwesomeIcon: faJava,
+      skillInfo: "Connecting RDBs to Java ecosystem",
+      backgroundImage: "assets/technology/spring-boot.jpg",
+      Profeciency: 4
+    }
     let backend:Skillset = {
       name: "Backend",
-      skills: [oracle,mysql,java,springBoot],
+      skills: [oracle,mysql,java,springBoot,hibernate],
       description: "Developing Infrastructure that will handle and store precious data"
     }
     
@@ -160,7 +167,56 @@ export class SkillComponent implements OnInit {
       description: "Developing Infrastructure that will handle and store precious data"
     }
 
-    this.skillsets = [frontend,backend,tools];
+    let graphQL:Skill= {
+      name: "GraphQL",
+      fontAwesomeIcon: faDiagramProject,
+      skillInfo: "Database as an API 🥳",
+      backgroundImage: "assets/technology/swagger.png",
+      Profeciency: 2
+    }
+
+    let elastiSearch:Skill= {
+      name: "ElastiSearch",
+      fontAwesomeIcon: faSearchengin,
+      skillInfo: "Elastic Search is a part of ELK Stack which is used to pipeline data a Fast Database which can be used to create search components or create Dashboards",
+      backgroundImage: "assets/technology/swagger.png",
+      Profeciency: 2
+    }
+    let logstash:Skill= {
+      name: "LogStash",
+      fontAwesomeIcon: faSearchengin,
+      skillInfo: "I use this to transfer/Feed my Spring Boot Data Logs to kibana",
+      backgroundImage: "assets/technology/swagger.png",
+      Profeciency: 2
+    }
+    let kibana:Skill= {
+      name: "Kibana",
+      fontAwesomeIcon: faTableColumns,
+      skillInfo: "I dont know how the shit this works, need help 😢",
+      backgroundImage: "assets/technology/swagger.png",
+      Profeciency: 0
+    }
+    let cloudComputing:Skill= {
+      name: "Cloud Computing - GCP/Azure/AWS",
+      fontAwesomeIcon: faCloudversify,
+      skillInfo: "I know the theory, I know basic stuff but need to learn automation",
+      backgroundImage: "assets/technology/swagger.png",
+      Profeciency: 2
+    }
+    let cyberSecurity:Skill= {
+      name: "Cyber Security - Blue Team",
+      fontAwesomeIcon: faShieldDog,
+      skillInfo: "Love to work in this field some day, know the basics and OPSEC part need professional experience to show-off😀😄",
+      backgroundImage: "assets/technology/swagger.png",
+      Profeciency: 2
+    }
+    let learning:Skillset = {
+      name: "Learning",
+      skills: [graphQL,elastiSearch,logstash,kibana,cloudComputing,cyberSecurity],
+      description: "Skills which are still work in progress, but sound awesome when mastered!"
+    }
+
+    this.skillsets = [frontend,backend,tools,learning];
 
     //Certifications
     let cyberaryCybSecCertification:Certification = {
